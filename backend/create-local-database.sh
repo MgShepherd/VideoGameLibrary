@@ -7,6 +7,7 @@ id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 name varchar(255) NOT NULL,
 publisher varchar(255),
 release_date DATE,
-genre varchar(255));"
+genre varchar(255),
+image_url varchar(255));"
 
 $MYSQL -uroot -p -e "$CREATE_DB_STATEMENT$CREATE_GAME_TABLE"

@@ -16,7 +16,7 @@ public class GameControllerTest {
     private GameService mockService = Mockito.mock(GameService.class);
     private GameController gameController;
 
-    private Game testGame = new Game(1, "TestGame", "TestPublisher", Date.valueOf("2022-12-23"), "Testing");
+    private Game testGame = new Game(1, "TestGame", "TestPublisher", Date.valueOf("2022-12-23"), "https://www.google.co.uk", "Testing");
 
     @BeforeEach
     public void setupTests() {

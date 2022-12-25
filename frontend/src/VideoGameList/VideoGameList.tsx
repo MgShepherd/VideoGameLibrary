@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
-interface VideoGame {
-  id: number;
-  name: string;
-  publisher: string;
-  releaseDate: Date;
-  genre: string;
-}
+import VideoGame from '../Models/VideoGame';
+import VideoGameItem from '../VideoGameItem/VideoGameItem';
+import { Box } from '@mui/material';
 
 const VideoGameList = () => {
   const [videoGames, setVideoGames] = useState<VideoGame[]>([]);
@@ -17,7 +12,7 @@ const VideoGameList = () => {
       axios
         .get('http://localhost:8080/games')
         .then((response) => {
-          if (response.data) {
+          if (response.data && response.data.length > 0) {
             setVideoGames(response.data);
           }
         })
@@ -29,13 +24,18 @@ const VideoGameList = () => {
     fetchGameData();
   }, []);
 
-  return (
-    <div>
-      {videoGames.map((game) => (
-        <p>{game.name}</p>
-      ))}
-    </div>
-  );
+  const getItemsToDisplay = () => {
+    if (videoGames.length > 0) {
+      return videoGames.map((game, index) => (
+        <div data-testid="GameItem">
+          <VideoGameItem game={game} key={index} />
+        </div>
+      ));
+    }
+    return <h2>No Video Games could be found.</h2>;
+  };
+
+  return <Box sx={{ padding: '2em' }}>{getItemsToDisplay()}</Box>;
 };
 
 export default VideoGameList;

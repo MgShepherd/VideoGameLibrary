@@ -13,15 +13,17 @@ public class Game {
     private String name;
     private String publisher;
     private Date releaseDate;
+    private String imageUrl;
     private String genre;
 
     public Game() {}
 
-    public Game(int id, String name, String publisher, Date releaseDate, String genre) {
+    public Game(int id, String name, String publisher, Date releaseDate, String imageUrl, String genre) {
         this.id = id;
         this.name = name;
         this.publisher = publisher;
         this.releaseDate = releaseDate;
+        this.imageUrl = imageUrl;
         this.genre = genre;
     }
 
@@ -55,6 +57,14 @@ public class Game {
 
     public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getGenre() {
