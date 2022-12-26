@@ -2,7 +2,7 @@ export default interface VideoGame {
   id: number;
   name: string;
   publisher: string;
-  releaseDate: Date;
+  releaseDate: string;
   imageUrl: string;
   genre: string;
 }

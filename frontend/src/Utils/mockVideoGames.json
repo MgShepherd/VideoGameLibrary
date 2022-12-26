@@ -1,1 +1,1 @@
-[{ "id": 0, "name": "FakeGame", "publisher": "Michael Shepherd", "releaseDate": "2022-12-24", "image_url": "http://www.fakeurl.com", "genre": "Test"}]
+[{ "id": 0, "name": "FakeGame", "publisher": "Michael Shepherd", "releaseDate": "2022-12-24", "imageUrl": "http://www.fakeurl.com", "genre": "Test"}]
