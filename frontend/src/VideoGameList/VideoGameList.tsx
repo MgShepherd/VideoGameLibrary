@@ -27,8 +27,8 @@ const VideoGameList = () => {
   const getItemsToDisplay = () => {
     if (videoGames.length > 0) {
       return videoGames.map((game, index) => (
-        <div data-testid="GameItem">
-          <VideoGameItem game={game} key={index} />
+        <div data-testid="GameItem" key={index}>
+          <VideoGameItem game={game} />
         </div>
       ));
     }
