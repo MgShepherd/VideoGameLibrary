@@ -5,12 +5,11 @@ import jakarta.persistence.*;
 import java.sql.Date;
 
 @Entity(name = "Games")
+@IdClass(GameID.class)
 public class Game {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-
     private String name;
+    @Id
     private String publisher;
     private Date releaseDate;
     private String imageUrl;
@@ -18,21 +17,12 @@ public class Game {
 
     public Game() {}
 
-    public Game(int id, String name, String publisher, Date releaseDate, String imageUrl, String genre) {
-        this.id = id;
+    public Game(String name, String publisher, Date releaseDate, String imageUrl, String genre) {
         this.name = name;
         this.publisher = publisher;
         this.releaseDate = releaseDate;
         this.imageUrl = imageUrl;
         this.genre = genre;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
