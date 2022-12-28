@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import VideoGame from '../Models/VideoGame';
+import VideoGame from '../../Models/VideoGame';
 import VideoGameItem from '../VideoGameItem/VideoGameItem';
 import { Box } from '@mui/material';
 

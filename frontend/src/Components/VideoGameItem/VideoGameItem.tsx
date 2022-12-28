@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardMedia } from '@mui/material';
-import VideoGame from '../Models/VideoGame';
+import VideoGame from '../../Models/VideoGame';
 
 interface VideoGameItemProps {
   game: VideoGame;

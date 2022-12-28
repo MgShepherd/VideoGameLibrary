@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import VideoGameList from './VideoGameList';
 import axios from 'axios';
-import mockData from '../Utils/mockVideoGames.json';
+import mockData from '../../Utils/mockVideoGames.json';
 
 jest.mock('axios');
 

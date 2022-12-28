@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import VideoGameItem from './VideoGameItem';
-import mockVideoGames from '../Utils/mockVideoGames.json';
+import mockVideoGames from '../../Utils/mockVideoGames.json';
 
 test('renders all the correct parts of the video game object', () => {
   render(<VideoGameItem game={mockVideoGames[0]} />);
