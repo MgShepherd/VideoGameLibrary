@@ -8,8 +8,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 @ControllerAdvice
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
-    @ExceptionHandler(AlreadyExistsException.class)
-    public ResponseEntity<CustomErrorResponse> handleAlreadyExists(HttpException ex) {
+    @ExceptionHandler(HttpException.class)
+    public ResponseEntity<CustomErrorResponse> handleException(HttpException ex) {
         CustomErrorResponse error = new CustomErrorResponse(ex.getStatus(), ex.getMessage());
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
